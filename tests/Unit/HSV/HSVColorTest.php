@@ -21,7 +21,7 @@ class HSVColorTest extends TestCase
 
     /**
      * @covers ::__construct
-     * @covers ::isInColorRangeExcl
+     * @covers ::isInColorRangeIncl
      */
     public function testIsInColorRangeIncl(): void
     {
