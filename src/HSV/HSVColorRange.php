@@ -27,11 +27,6 @@ readonly class HSVColorRange
 
     public function containsExcl(HSVColor $hsvColor): bool
     {
-        return $hsvColor->hue        > $this->hueMin
-            && $hsvColor->hue        < $this->hueMax
-            && $hsvColor->saturation > $this->saturationMin
-            && $hsvColor->saturation < $this->saturationMax
-            && $hsvColor->value      > $this->valueMin
-            && $hsvColor->value      < $this->valueMax;
+        return ! $this->containsIncl($hsvColor);
     }
 }
