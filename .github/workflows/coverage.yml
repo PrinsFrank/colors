@@ -15,6 +15,7 @@ jobs:
       - name: Setup PHP with PCOV
         uses: shivammathur/setup-php@v2
         with:
+          php-version: 8.3
           coverage: pcov
       - name: Install dependencies
         run: composer install
