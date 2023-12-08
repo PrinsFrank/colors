@@ -16,9 +16,9 @@ readonly class RGBColor
 
     public function toHSV(): HSVColor
     {
-        $percentageRed   = $this->red / 255;
+        $percentageRed   = $this->red   / 255;
         $percentageGreen = $this->green / 255;
-        $percentageBlue  = $this->blue / 255;
+        $percentageBlue  = $this->blue  / 255;
 
         $highestRGBPercentage = max($percentageRed, $percentageGreen, $percentageBlue);
         $lowestRGBPercentage  = min($percentageRed, $percentageGreen, $percentageBlue);
