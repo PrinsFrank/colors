@@ -22,5 +22,7 @@ jobs:
           coverage: none
       - name: Install dependencies
         run: composer install
+      - name: Check PSR-4 mapping
+        run: composer dump-autoload --optimize --strict-psr
       - name: Run unit tests
         run: composer run unit
