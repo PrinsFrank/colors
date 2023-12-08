@@ -15,23 +15,12 @@ readonly class HSVColorRange
     ) {
     }
 
-    public function containsIncl(HSVColor $hsvColor): bool
+    public function contains(HSVColor $hsvColor): bool
     {
-        return $hsvColor->hue        >= $this->hueMin
-            && $hsvColor->hue        <= $this->hueMax
+        return (($this->hueMax < $this->hueMin && ($hsvColor->hue >= $this->hueMin || $hsvColor->hue <= $this->hueMax)) || ($hsvColor->hue >= $this->hueMin && $hsvColor->hue <= $this->hueMax))
             && $hsvColor->saturation >= $this->saturationMin
             && $hsvColor->saturation <= $this->saturationMax
             && $hsvColor->value      >= $this->valueMin
             && $hsvColor->value      <= $this->valueMax;
-    }
-
-    public function containsExcl(HSVColor $hsvColor): bool
-    {
-        return $hsvColor->hue        > $this->hueMin
-            && $hsvColor->hue        < $this->hueMax
-            && $hsvColor->saturation > $this->saturationMin
-            && $hsvColor->saturation < $this->saturationMax
-            && $hsvColor->value      > $this->valueMin
-            && $hsvColor->value      < $this->valueMax;
     }
 }

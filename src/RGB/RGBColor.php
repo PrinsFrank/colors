@@ -25,7 +25,7 @@ readonly class RGBColor
         $chroma               = $highestRGBPercentage - $lowestRGBPercentage;
 
         $highestRGB = (int) round(100 * $highestRGBPercentage);
-        if ($chroma < 0.5) {
+        if ($chroma === 0.0 || $chroma === 0) {
             return new HSVColor(0, 0, $highestRGB);
         }
 

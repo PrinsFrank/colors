@@ -12,13 +12,8 @@ readonly class HSVColor
     ) {
     }
 
-    public function isInColorRangeIncl(HSVColorRange $colorRange): bool
+    public function isInColorRange(HSVColorRange $colorRange): bool
     {
-        return $colorRange->containsIncl($this);
-    }
-
-    public function isInColorRangeExcl(HSVColorRange $colorRange): bool
-    {
-        return $colorRange->containsExcl($this);
+        return $colorRange->contains($this);
     }
 }
