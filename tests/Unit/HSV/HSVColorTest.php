@@ -12,19 +12,10 @@ class HSVColorTest extends TestCase
 {
     /**
      * @covers ::__construct
-     * @covers ::isInColorRangeExcl
-     */
-    public function testIsInColorRangeExcl(): void
-    {
-        static::assertTrue((new HSVColor(1, 1, 1))->isInColorRangeExcl(new HSVColorRange(0, 2, 0, 2, 0, 2)));
-    }
-
-    /**
-     * @covers ::__construct
-     * @covers ::isInColorRangeIncl
+     * @covers ::isInColorRange
      */
     public function testIsInColorRangeIncl(): void
     {
-        static::assertTrue((new HSVColor(1, 1, 1))->isInColorRangeIncl(new HSVColorRange(1, 1, 1, 1, 1, 1)));
+        static::assertTrue((new HSVColor(1, 1, 1))->isInColorRange(new HSVColorRange(1, 1, 1, 1, 1, 1)));
     }
 }
