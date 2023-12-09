@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace PrinsFrank\Colors\Tests\HSV;
+namespace PrinsFrank\Colors\Tests\Unit\HSV;
 
 use PHPUnit\Framework\TestCase;
 use PrinsFrank\Colors\HSV\HSVColor;
